@@ -3,13 +3,15 @@ require_once "vendor/autoload.php";
 
 $produto = new App\Model\Produto();
 $produto->setNome("Celular");
-$produto->setDescricao("Celular bom bom muito bom");
-$produto->setId(3);
+$produto->setDescricao("Muito ruim");
+$produto->setId("2");
 
 $produtoDao = new \App\Model\ProdutoDao;
-$res = $produtoDao->read();
+// $produtoDao->delete(1);
+// $produtoDao->update($produto);
+// $res = $produtoDao->read();
 
-foreach($res as $r) {
-    echo $r['nome']. " <strong> \ </strong> ". $r['descricao']. "<hr>";
+// foreach($res as $r) {
+//     echo $r['nome']. " <strong> \ </strong> ". $r['descricao']. "<hr>";
 
-}
+// }
